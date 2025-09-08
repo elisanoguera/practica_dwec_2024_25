@@ -1,7 +1,13 @@
 let presupuesto = 0;
 
-function actualizarPresupuesto() {
-    // TODO
+function actualizarPresupuesto(presup) {
+    if ( presup < 0 ) {
+        console.log( "Tu presupuesto es menor que 0" );
+        return(-1);
+    } else {
+        presupuesto=presup;
+        return(presup);
+    } 
 }
 
 function mostrarPresupuesto() {
