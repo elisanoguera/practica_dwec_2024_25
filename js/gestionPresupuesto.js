@@ -1,11 +1,11 @@
 let presupuesto = 0;
 
 function actualizarPresupuesto(presup) {
-    if ( presup < 0 ) {
-        return -1;
-    } else {
+    if ( presup >= 0 ) {
         presupuesto = presup;
         return presup;
+    } else {
+        return -1;
     } 
 }
 
