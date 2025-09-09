@@ -5,12 +5,13 @@ function actualizarPresupuesto(presup) {
         presupuesto = presup;
         return presup;
     } else {
+        console.log("ERROR. El presupuesto es negativo");
         return -1;
     } 
 }
 
 function mostrarPresupuesto() {
-    // TODO
+    console.log("Tu presupuesto actual es de " + presupuesto + "€");
 }
 
 function CrearGasto() {
