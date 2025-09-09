@@ -18,6 +18,15 @@ function mostrarPresupuesto() {
 
 function CrearGasto( desc, val ) {
 
+    // Propiedades
+
+    if ( val >= 0 )
+        this.valor = val;
+    else
+        this.valor = 0;
+
+    this.descripcion = desc;
+
     // Métodos
 
     this.mostrarGasto = function() {
@@ -31,16 +40,6 @@ function CrearGasto( desc, val ) {
     this.actualizarValor = function(val) {
         if (val>=0) this.valor=val;
     }
-
-    // Propiedades
-
-    if ( val >= 0 )
-        this.valor = val;
-    else
-        this.valor = 0;
-
-    this.descripcion = desc;
-
 }
 
 // NO MODIFICAR A PARTIR DE AQUÍ: exportación de funciones y objetos creados para poder ejecutar los tests.
