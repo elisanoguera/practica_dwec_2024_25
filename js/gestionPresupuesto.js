@@ -2,16 +2,6 @@
 
 let presupuesto = 0;
 
-/*
-let gasto = {
-    valor: 0,
-    descripcion: "",
-    mostrarGasto: function() {
-	console.log(`Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`);},
-    actualizarDescripcion: function(desc) {this.descripcion=desc},
-    actualizarValor: function(val) {this.valor=val}
-}
-*/
 function actualizarPresupuesto( presup ) {
     if ( presup >= 0 ) {
         presupuesto = presup;
@@ -35,8 +25,14 @@ function CrearGasto( val, desc ) {
 
     this.descripcion = desc;
 
-    this.mostrarGasto = function() {return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;}
-    
+/*    this.mostrarGasto = function() {
+        return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;
+    } */
+
+    this.mostrarGasto = function() {
+        return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;
+    }
+   
     this.actualizarDescripcion = function(desc) {this.descripcion=desc;}
 
     this.actualizarValor = function(val) {if (val>=0) this.valor=val;}
