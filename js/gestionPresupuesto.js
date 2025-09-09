@@ -18,6 +18,23 @@ function mostrarPresupuesto() {
 
 function CrearGasto( val, desc ) {
 
+    // Métodos
+
+    this.mostrarGasto = function() {
+        return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;
+    }
+
+/*    this.actualizarDescripcion = function(desc) {
+        this.descripcion=desc;
+    }
+
+    this.actualizarValor = function(val) {
+        if (val>=0) this.valor=val;
+    }
+
+*/
+    // Propiedades
+
     if ( val >= 0 )
         this.valor = val;
     else
@@ -25,17 +42,7 @@ function CrearGasto( val, desc ) {
 
     this.descripcion = desc;
 
-/*    this.mostrarGasto = function() {
-        return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;
-    } */
 
-    this.mostrarGasto = function() {
-        return `Gasto correspondiente a ${this.valor} con valor ${this.descripcion} €`;
-    }
-   
-    this.actualizarDescripcion = function(desc) {this.descripcion=desc;}
-
-    this.actualizarValor = function(val) {if (val>=0) this.valor=val;}
 }
 
 // NO MODIFICAR A PARTIR DE AQUÍ: exportación de funciones y objetos creados para poder ejecutar los tests.
