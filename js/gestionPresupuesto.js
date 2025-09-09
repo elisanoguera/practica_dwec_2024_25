@@ -24,7 +24,7 @@ function mostrarPresupuesto() {
     console.log(`Tu presupuesto actual es de ` + presupuesto + ` €`);
 }
 
-function crearGasto( val, desc ) {
+function CrearGasto( val, desc ) {
 
     if ( val >= 0 )
         this.valor = val;
