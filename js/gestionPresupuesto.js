@@ -1,21 +1,43 @@
 let presupuesto = 0;
 
-function actualizarPresupuesto(presup) {
+/*
+let gasto = {
+    valor: 0,
+    descripcion: "",
+    mostrarGasto: function() {
+	console.log(`Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`);},
+    actualizarDescripcion: function(desc) {this.descripcion=desc},
+    actualizarValor: function(val) {this.valor=val}
+}
+*/
+function actualizarPresupuesto( presup ) {
     if ( presup >= 0 ) {
         presupuesto = presup;
         return presup;
     } else {
-        console.log("ERROR. El presupuesto es negativo");
+        console.log(`ERROR. El presupuesto es negativo`);
         return -1;
     } 
 }
 
 function mostrarPresupuesto() {
-    console.log("Tu presupuesto actual es de " + presupuesto + " €");
+    console.log(`Tu presupuesto actual es de ` + presupuesto + ` €`);
 }
 
-function CrearGasto() {
-    // TODO
+function crearGasto( val, desc ) {
+
+    if ( val >= 0 )
+        this.valor = val;
+    else
+        this.valor = 0;
+
+    this.descripcion = desc;
+
+    this.mostrarGasto = function() {console.log(`Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`)};
+    
+    this.actualizarDescripcion = function(desc) {this.descripcion=desc};
+
+    this.actualizarValor = function(val) {if (val>=0) this.valor=val};
 }
 
 // NO MODIFICAR A PARTIR DE AQUÍ: exportación de funciones y objetos creados para poder ejecutar los tests.
