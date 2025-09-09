@@ -24,7 +24,7 @@ function CrearGasto( desc, val ) {
         return `Gasto correspondiente a ${this.descripcion} con valor ${this.valor} €`;
     }
 
-/*    this.actualizarDescripcion = function(desc) {
+    this.actualizarDescripcion = function(desc) {
         this.descripcion=desc;
     }
 
@@ -32,7 +32,6 @@ function CrearGasto( desc, val ) {
         if (val>=0) this.valor=val;
     }
 
-*/
     // Propiedades
 
     if ( val >= 0 )
