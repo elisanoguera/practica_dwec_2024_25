@@ -16,7 +16,7 @@ function mostrarPresupuesto() {
     return `Tu presupuesto actual es de ` + presupuesto + ` €`;
 }
 
-function CrearGasto( val, desc ) {
+function CrearGasto( desc, val ) {
 
     // Métodos
 
@@ -41,7 +41,6 @@ function CrearGasto( val, desc ) {
         this.valor = 0;
 
     this.descripcion = desc;
-
 
 }
 
